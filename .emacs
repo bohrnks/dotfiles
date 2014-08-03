@@ -40,6 +40,12 @@
 ;; Jump to file
 (define-key global-map "\C-c>" 'find-file-at-point)
 
+;; Ctrl-tab to switch between .cpp and .h files.
+(add-hook 'c-mode-common-hook
+          (lambda()
+            (local-set-key [C-tab] 'ff-find-other-file)
+            ))
+
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-c\C-k" 'kill-region)
 
