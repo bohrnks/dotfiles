@@ -41,6 +41,8 @@ alias k9='killall -9 -i'
 #git
 alias g='git'
 alias clone='git clone'
+alias push='git push'
+alias pull='git pull'
 alias gd='git diff'
 alias gdc='git diff --cached --color=auto'
 alias gds='gd --stat'
