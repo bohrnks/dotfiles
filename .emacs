@@ -2,6 +2,13 @@
 
 
 ;; (setq case-fold-search nil) ; make searches case sensitive
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (setq case-fold-search t)   ; make searches case insensitive
 
 (setq debug-on-error t)
@@ -144,7 +151,6 @@
 ;; (color-theme-standard)
 ;; (color-theme-vim-colors)
 
-(require 'highlight-80+)
 ;; (highlight-80+-mode t)
 
 ;; Insread of the default (minimize), undo on Control-Z
@@ -225,7 +231,7 @@
 
 ;; (set-frame-font "Monaco-11")
 ;; (set-frame-font "-*-monaco-*-*-*-*-*-*-*-*-*-*-*-*")
-(set-face-attribute 'default nil :height 108)
+(set-face-attribute 'default nil :height 125)
 ;; C-x C-- (-, +, 0) - text-scale-adjust. Zoom text size up and down.
 
 (setq transient-mark-mode nil)
@@ -272,9 +278,9 @@
             ))
 
 ;; SHELL is /bin/false by default on Mac.
-(setenv "SHELL" "/bin/zsh")
-(setenv "ESHELL" "/bin/zsh")
-(shell "/bin/zsh")
+;; (setenv "SHELL" "/bin/bash")
+;; (setenv "ESHELL" "/bin/bash")
+;; (shell "/bin/bash")
 (setq mac-command-modifier 'meta)
 
 
@@ -371,7 +377,6 @@
 ;; To restore, use M-x resume.
 
 (require 'uniquify)
-(require 'guess-offset)
 
 ;; Enable pasting from System copy buffer (Ctrl-C) in addition to the
 ;; X buffer (select with mouse)
@@ -476,3 +481,8 @@
 
 (global-set-key (kbd "C->") 'git-grep)
 ;; ==================== /git grep ====================
+
+
+;; Optional modes
+;; (require 'highlight-80+)
+;;(require 'guess-offset)
